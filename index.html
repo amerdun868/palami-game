@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <!-- Mengunci zoom dan menyesuaikan skala untuk layar HP -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Palami</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Elemen Audio Tersembunyi -->
+    <audio id="bgm" loop>
+        <source src="assets/backsound.mp3" type="audio/mpeg">
+    </audio>
+    <!-- 1. Splash Screen -->
+    <div id="splash-screen" class="screen active">
+        <h1>Dari Ami untuk Nay,<br>dengan cinta yang ugal-ugalan <3</h1>
+    </div>
+
+    <!-- 2. Prologue -->
+    <div id="prologue-screen" class="screen">
+        <p id="prologue-text">Teks prolog pertama di sini...</p>
+        <button id="btn-next-prologue">Next</button>
+    </div>
+
+    <!-- 3. Main Game -->
+    <div id="game-screen" class="screen">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- UI Overlay: D-Pad, Open, dan Menu Keluar -->
+        <div id="ui-layer">
+            <button id="btn-keluar">Keluar</button>
+            <button id="btn-open" class="hidden">OPEN</button>
+            
+            <div id="dpad">
+                <button id="btn-up" class="dir-btn">↑</button>
+                <div class="dpad-middle">
+                    <button id="btn-left" class="dir-btn">←</button>
+                    <button id="btn-right" class="dir-btn">→</button>
+                </div>
+                <button id="btn-down" class="dir-btn">↓</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Popup Peti (Kado & Doa) -->
+    <div id="chest-popup" class="modal hidden">
+        <div class="modal-content">
+            <button id="btn-close-popup">X</button>
+            <div id="popup-content">
+                <!-- Foto atau teks doa akan disisipkan via JavaScript -->
+            </div>
+            <button id="btn-next-slide" class="hidden">Next</button>
+        </div>
+    </div>
+
+    <!-- 5. Credits / Penutup -->
+    <div id="credits-screen" class="screen">
+        <h1>Maaciw udah main :)</h1>
+        <p>Happy Birthday, Nay!</p>
+    </div>
+
+    <script src="game.js"></script>
+</>
+</html>

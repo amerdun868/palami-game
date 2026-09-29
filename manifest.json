@@ -1,0 +1,17 @@
+{
+  "name": "Palami",
+  "short_name": "Palami",
+  "description": "Game dari Ami untuk Nay",
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#1a1a1a",
+  "theme_color": "#3b7d4f",
+  "icons": [
+    {
+      "src": "./assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
